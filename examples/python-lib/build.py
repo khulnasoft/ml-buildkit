@@ -1,11 +1,11 @@
 import os
 
-from universal_build import build_utils
-from universal_build.helpers import build_python
+from ml_buildkit import build_utils
+from ml_buildkit.helpers import build_python
 
 # Project specific configuration
 MAIN_PACKAGE = "template_package"
-GITHUB_URL = "https://github.com/ml-tooling/universal-build"
+GITHUB_URL = "https://github.com/khulnasoft/ml-buildkit"
 
 HERE = os.path.abspath(os.path.dirname(__file__))
 

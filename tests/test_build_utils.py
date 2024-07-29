@@ -4,7 +4,7 @@ from typing import Tuple
 
 import pytest
 
-from universal_build import build_utils
+from ml_buildkit import build_utils
 
 valid_patch_version = "1.1.4"
 valid_minor_version = "2.2.0"

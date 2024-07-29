@@ -1,7 +1,7 @@
 import os
 
-from universal_build import build_utils
-from universal_build.helpers import build_mkdocs
+from ml_buildkit import build_utils
+from ml_buildkit.helpers import build_mkdocs
 
 HERE = os.path.abspath(os.path.dirname(__file__))
 

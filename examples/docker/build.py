@@ -1,10 +1,10 @@
 import os
 
-from universal_build import build_utils
-from universal_build.helpers import build_docker
+from ml_buildkit import build_utils
+from ml_buildkit.helpers import build_docker
 
 COMPONENT_NAME = "docker-template"
-DOCKER_IMAGE_PREFIX = "mltooling"
+DOCKER_IMAGE_PREFIX = "khulnasoft"
 
 HERE = os.path.abspath(os.path.dirname(__file__))
 

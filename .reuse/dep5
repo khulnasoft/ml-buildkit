@@ -1,9 +1,9 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: universal-build
+Upstream-Name: ml-buildkit
 Upstream-Contact: Lukas Masuch <lukas.masuch@gmail.com>
                   Benjamin Raethlein <benjamin.raethlein@gmail.com>
                   Jan Kalkan <kalkan.jan@gmail.com>
-Source: https://github.com/ml-tooling/universal-build
+Source: https://github.com/khulnasoft/ml-buildkit
 
 Files: **
 Copyright: Lukas Masuch, Benjamin Raehtlein, and Jan Kalkan

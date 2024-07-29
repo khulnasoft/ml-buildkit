@@ -1,9 +1,9 @@
 <!-- markdownlint-disable -->
 
-<a href="https://github.com/ml-tooling/universal-build/blob/main/src/universal_build/build_utils.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khulnasoft/ml-buildkit/blob/main/src/ml_buildkit/build_utils.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
-# <kbd>module</kbd> `universal_build.build_utils`
-Universal build utilities. 
+# <kbd>module</kbd> `ml_buildkit.build_utils`
+Ml build utilities. 
 
 **Global Variables**
 ---------------
@@ -26,7 +26,7 @@ Universal build utilities.
 
 ---
 
-<a href="https://github.com/ml-tooling/universal-build/blob/main/src/universal_build/build_utils.py#L92"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khulnasoft/ml-buildkit/blob/main/src/ml_buildkit/build_utils.py#L92"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `log`
 
@@ -45,7 +45,7 @@ Log message to stdout.
 
 ---
 
-<a href="https://github.com/ml-tooling/universal-build/blob/main/src/universal_build/build_utils.py#L101"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khulnasoft/ml-buildkit/blob/main/src/ml_buildkit/build_utils.py#L101"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `command_exists`
 
@@ -76,7 +76,7 @@ Checks whether the `command` exists and is marked as executable.
 
 ---
 
-<a href="https://github.com/ml-tooling/universal-build/blob/main/src/universal_build/build_utils.py#L133"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khulnasoft/ml-buildkit/blob/main/src/ml_buildkit/build_utils.py#L133"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `parse_arguments`
 
@@ -107,7 +107,7 @@ Sanitized means that, for example, the version is already checked and set depend
 
 ---
 
-<a href="https://github.com/ml-tooling/universal-build/blob/main/src/universal_build/build_utils.py#L284"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khulnasoft/ml-buildkit/blob/main/src/ml_buildkit/build_utils.py#L284"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `create_git_tag`
 
@@ -142,7 +142,7 @@ The version will be prefixed with 'v'. If push is set, the tag is pushed to remo
 
 ---
 
-<a href="https://github.com/ml-tooling/universal-build/blob/main/src/universal_build/build_utils.py#L321"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khulnasoft/ml-buildkit/blob/main/src/ml_buildkit/build_utils.py#L321"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `build`
 
@@ -162,7 +162,7 @@ Run the build logic of the specified component, except if the path is a (sub-)pa
 
 ---
 
-<a href="https://github.com/ml-tooling/universal-build/blob/main/src/universal_build/build_utils.py#L343"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khulnasoft/ml-buildkit/blob/main/src/ml_buildkit/build_utils.py#L343"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `run`
 
@@ -196,7 +196,7 @@ Run a specified command.
 
 ---
 
-<a href="https://github.com/ml-tooling/universal-build/blob/main/src/universal_build/build_utils.py#L403"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khulnasoft/ml-buildkit/blob/main/src/ml_buildkit/build_utils.py#L403"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `exit_process`
 
@@ -211,7 +211,7 @@ Exit the process with exit code.
 
 ---
 
-<a href="https://github.com/ml-tooling/universal-build/blob/main/src/universal_build/build_utils.py#L418"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khulnasoft/ml-buildkit/blob/main/src/ml_buildkit/build_utils.py#L418"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `replace_in_files`
 
@@ -240,7 +240,7 @@ Replaces a string or regex occurence in a collection of files.
 
 ---
 
-<a href="https://github.com/ml-tooling/universal-build/blob/main/src/universal_build/build_utils.py#L459"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khulnasoft/ml-buildkit/blob/main/src/ml_buildkit/build_utils.py#L459"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `get_latest_version`
 
@@ -253,7 +253,7 @@ Returns the latest version based on Git tags.
 
 ---
 
-<a href="https://github.com/ml-tooling/universal-build/blob/main/src/universal_build/build_utils.py#L469"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khulnasoft/ml-buildkit/blob/main/src/ml_buildkit/build_utils.py#L469"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `duplicate_folder`
 
@@ -271,7 +271,7 @@ Deprecated. Use `build_utils.copy` instead.
 
 ---
 
-<a href="https://github.com/ml-tooling/universal-build/blob/main/src/universal_build/build_utils.py#L479"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khulnasoft/ml-buildkit/blob/main/src/ml_buildkit/build_utils.py#L479"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `copy`
 
@@ -318,4 +318,4 @@ copy(
 
 ---
 
-_This file was automatically generated via [lazydocs](https://github.com/ml-tooling/lazydocs)._
+_This file was automatically generated via [lazydocs](https://github.com/khulnasoft/lazydocs)._

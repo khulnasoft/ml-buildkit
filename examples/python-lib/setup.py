@@ -11,9 +11,9 @@ from setuptools import find_packages, setup  # type: ignore
 NAME = "python-lib"
 MAIN_PACKAGE = "template_package"
 DESCRIPTION = "Python package template."
-URL = "https://github.com/mltooling/project-template"
-EMAIL = "team@mltooling.org"
-AUTHOR = "ML Tooling Team"
+URL = "https://github.com/khulnasoft/project-template"
+EMAIL = "team@khulnasoft.com"
+AUTHOR = "KhulnaSoft Team"
 LICENSE = "MIT"
 REQUIRES_PYTHON = ">=3.6"
 VERSION = None  # Only set version if you like to overwrite the version in _about.py

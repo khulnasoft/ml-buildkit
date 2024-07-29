@@ -1,4 +1,4 @@
-"""Universal build utilities."""
+"""Ml build utilities."""
 
 import argparse
 import os
@@ -8,7 +8,7 @@ import subprocess
 import sys
 from typing import Dict, List, Match, Optional, Tuple, Union
 
-from universal_build._utilities import DashInsensitiveDict
+from ml_buildkit._utilities import DashInsensitiveDict
 
 _ALLOWED_BRANCH_TYPES_FOR_RELEASE = ["release", "production"]
 _MAIN_BRANCH_NAMES = ["master", "main"]

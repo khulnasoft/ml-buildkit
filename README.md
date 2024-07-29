@@ -1,19 +1,19 @@
 <!-- markdownlint-disable MD033 MD041 -->
 <h1 align="center">
-    universal-build
+    ml-buildkit
 </h1>
 
 <p align="center">
-    <strong>Universal build utilities for containerized build pipelines.</strong>
+    <strong>Ml build utilities for containerized build pipelines.</strong>
 </p>
 
 <p align="center">
-    <a href="https://pypi.org/project/universal-build/" title="PyPi Version"><img src="https://img.shields.io/pypi/v/universal-build?color=green&style=flat"></a>
-    <a href="https://pypi.org/project/universal-build/" title="Python Version"><img src="https://img.shields.io/badge/Python-3.6%2B-blue&style=flat"></a>
-    <a href="https://github.com/ml-tooling/universal-build/actions?query=workflow%3Abuild-pipeline" title="Build status"><img src="https://img.shields.io/github/workflow/status/ml-tooling/universal-build/build-pipeline?style=flat"></a>
-    <a href="https://github.com/ml-tooling/universal-build/blob/main/LICENSE" title="Project License"><img src="https://img.shields.io/badge/License-MIT-green.svg?style=flat"></a>
-    <a href="https://gitter.im/ml-tooling/universal-build/" title="Chat on Gitter"><img src="https://badges.gitter.im/ml-tooling/universal-build.svg"></a>
-    <a href="https://twitter.com/mltooling" title="ML Tooling on Twitter"><img src="https://img.shields.io/twitter/follow/mltooling.svg?label=follow&style=social"></a>
+    <a href="https://pypi.org/project/ml-buildkit/" title="PyPi Version"><img src="https://img.shields.io/pypi/v/ml-buildkit?color=green&style=flat"></a>
+    <a href="https://pypi.org/project/ml-buildkit/" title="Python Version"><img src="https://img.shields.io/badge/Python-3.6%2B-blue&style=flat"></a>
+    <a href="https://github.com/khulnasoft/ml-buildkit/actions?query=workflow%3Abuild-pipeline" title="Build status"><img src="https://img.shields.io/github/workflow/status/khulnasoft/ml-buildkit/build-pipeline?style=flat"></a>
+    <a href="https://github.com/khulnasoft/ml-buildkit/blob/main/LICENSE" title="Project License"><img src="https://img.shields.io/badge/License-MIT-green.svg?style=flat"></a>
+    <a href="https://gitter.im/khulnasoft/ml-buildkit/" title="Chat on Gitter"><img src="https://badges.gitter.im/khulnasoft/ml-buildkit.svg"></a>
+    <a href="https://twitter.com/khulnasoft" title="KhulnaSoft on Twitter"><img src="https://img.shields.io/twitter/follow/khulnasoft.svg?label=follow&style=social"></a>
 </p>
 
 <p align="center">
@@ -22,11 +22,11 @@
   <a href="#documentation">Documentation</a> •
   <a href="#support--feedback">Support</a> •
   <a href="#contribution">Contribution</a> •
-  <a href="https://github.com/ml-tooling/universal-build/releases">Changelog</a> •
+  <a href="https://github.com/khulnasoft/ml-buildkit/releases">Changelog</a> •
   <a href="#faq--known-issues">FAQ</a>
 </p>
 
-Universal-build is a set of utilities designed to build, test, package, and release software. It enables you to implement your build and release pipeline with Python scripts once and run it either on your local machine, in a containerized environment via [Act](https://github.com/nektos/act), or automated via [Github Actions](https://github.com/features/actions). It supports a monorepo or polyrepo setup and can be used with any programming language or technology. It also provides a full release pipeline for automated releases with changelog generation.
+ML-buildkit is a set of utilities designed to build, test, package, and release software. It enables you to implement your build and release pipeline with Python scripts once and run it either on your local machine, in a containerized environment via [Act](https://github.com/nektos/act), or automated via [Github Actions](https://github.com/features/actions). It supports a monorepo or polyrepo setup and can be used with any programming language or technology. It also provides a full release pipeline for automated releases with changelog generation.
 
 > _**WIP**: This project is still an alpha version and not ready for general usage._
 
@@ -44,7 +44,7 @@ Universal-build is a set of utilities designed to build, test, package, and rele
 > _Requirements: Python 3.6+._
 
 ```bash
-pip install universal-build
+pip install ml-buildkit
 ```
 
 ### Usage
@@ -52,7 +52,7 @@ pip install universal-build
 To make use of universal build for your project, create a build script with the name `build.py` in your project root. The example below is for a single yarn-based webapp component:
 
 ```python
-from universal_build import build_utils
+from ml_buildkit import build_utils
 
 args = build_utils.parse_arguments()
 
@@ -77,7 +77,7 @@ if args.get(build_utils.FLAGE_RELEASE):
 
 ```
 
-Next, copy the [`build-environment`](https://github.com/ml-tooling/universal-build/blob/main/actions/build-environment) action from the [actions](https://github.com/ml-tooling/universal-build/tree/main/actions) folder into the `.github/actions` folder of your repository. In addition, you need to copy the [build-](https://github.com/ml-tooling/universal-build/blob/main/workflows/build-pipeline.yml) and [release-pipeline](https://github.com/ml-tooling/universal-build/blob/main/workflows/release-pipeline.yml) workflows from the [workflows](https://github.com/ml-tooling/universal-build/tree/main/workflows) folder into the `.github/workflows` folder of your repository as well. Your repository should now contain atleast the following files:
+Next, copy the [`build-environment`](https://github.com/khulnasoft/ml-buildkit/blob/main/actions/build-environment) action from the [actions](https://github.com/khulnasoft/ml-buildkit/tree/main/actions) folder into the `.github/actions` folder of your repository. In addition, you need to copy the [build-](https://github.com/khulnasoft/ml-buildkit/blob/main/workflows/build-pipeline.yml) and [release-pipeline](https://github.com/khulnasoft/ml-buildkit/blob/main/workflows/release-pipeline.yml) workflows from the [workflows](https://github.com/khulnasoft/ml-buildkit/tree/main/workflows) folder into the `.github/workflows` folder of your repository as well. Your repository should now contain atleast the following files:
 
 ```
 your-repository
@@ -92,9 +92,9 @@ your-repository
       - build-pipeline.yml
 ```
 
-Once you have pushed the `build-environment` action and the [build-](https://github.com/ml-tooling/universal-build/blob/main/workflows/build-pipeline.yml) and [release-pipelines](https://github.com/ml-tooling/universal-build/blob/main/workflows/release-pipeline.yml), please look into the [Automated Build Pipeline](#automated-build-pipeline-ci) and [Automated Release Pipeline](#automated-release-pipeline-cd) sections for information on how to run your build- and release-pipelines.
+Once you have pushed the `build-environment` action and the [build-](https://github.com/khulnasoft/ml-buildkit/blob/main/workflows/build-pipeline.yml) and [release-pipelines](https://github.com/khulnasoft/ml-buildkit/blob/main/workflows/release-pipeline.yml), please look into the [Automated Build Pipeline](#automated-build-pipeline-ci) and [Automated Release Pipeline](#automated-release-pipeline-cd) sections for information on how to run your build- and release-pipelines.
 
-You can find a more detailed example project with multiple components in the [examples](https://github.com/ml-tooling/universal-build/tree/main/examples) folder.
+You can find a more detailed example project with multiple components in the [examples](https://github.com/khulnasoft/ml-buildkit/tree/main/examples) folder.
 
 ---
 
@@ -106,11 +106,11 @@ This project is maintained by [Benjamin Räthlein](https://twitter.com/raethlein
 
 | Type                           | Channel                                                                                                                                                                                                                                                                                                                                        |
 | ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 🚨&nbsp; **Bug Reports**       | <a href="https://github.com/ml-tooling/universal-build/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+label%3Abug+sort%3Areactions-%2B1-desc+" title="Open Bug Report"><img src="https://img.shields.io/github/issues/ml-tooling/universal-build/bug.svg?label=bug"></a>                                                                         |
-| 🎁&nbsp; **Feature Requests**  | <a href="https://github.com/ml-tooling/universal-build/issues?q=is%3Aopen+is%3Aissue+label%3Afeature+sort%3Areactions-%2B1-desc" title="Open Feature Request"><img src="https://img.shields.io/github/issues/ml-tooling/universal-build/feature.svg?label=feature%20request"></a>                                                              |
-| 👩‍💻&nbsp; **Usage Questions**   | <a href="https://stackoverflow.com/questions/tagged/ml-tooling" title="Open Question on Stackoverflow"><img src="https://img.shields.io/badge/stackoverflow-ml--tooling-orange.svg"></a> <a href="https://gitter.im/ml-tooling/universal-build" title="Chat on Gitter"><img src="https://badges.gitter.im/ml-tooling/universal-build.svg"></a> |
-| 🗯&nbsp; **General Discussion** | <a href="https://gitter.im/ml-tooling/universal-build" title="Chat on Gitter"><img src="https://badges.gitter.im/ml-tooling/universal-build.svg"></a> <a href="https://twitter.com/mltooling" title="ML Tooling on Twitter"><img src="https://img.shields.io/twitter/follow/mltooling.svg?style=social"></a>                                   |
-| ❓&nbsp; **Other Requests**    | <a href="mailto:team@mltooling.org" title="Email ML Tooling Team"><img src="https://img.shields.io/badge/email-ML Tooling-green?logo=mail.ru&logoColor=white"></a>                                                                                                                                                                             |
+| 🚨&nbsp; **Bug Reports**       | <a href="https://github.com/khulnasoft/ml-buildkit/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+label%3Abug+sort%3Areactions-%2B1-desc+" title="Open Bug Report"><img src="https://img.shields.io/github/issues/khulnasoft/ml-buildkit/bug.svg?label=bug"></a>                                                                         |
+| 🎁&nbsp; **Feature Requests**  | <a href="https://github.com/khulnasoft/ml-buildkit/issues?q=is%3Aopen+is%3Aissue+label%3Afeature+sort%3Areactions-%2B1-desc" title="Open Feature Request"><img src="https://img.shields.io/github/issues/khulnasoft/ml-buildkit/feature.svg?label=feature%20request"></a>                                                              |
+| 👩‍💻&nbsp; **Usage Questions**   | <a href="https://stackoverflow.com/questions/tagged/khulnasoft" title="Open Question on Stackoverflow"><img src="https://img.shields.io/badge/stackoverflow-ml--tooling-orange.svg"></a> <a href="https://gitter.im/khulnasoft/ml-buildkit" title="Chat on Gitter"><img src="https://badges.gitter.im/khulnasoft/ml-buildkit.svg"></a> |
+| 🗯&nbsp; **General Discussion** | <a href="https://gitter.im/khulnasoft/ml-buildkit" title="Chat on Gitter"><img src="https://badges.gitter.im/khulnasoft/ml-buildkit.svg"></a> <a href="https://twitter.com/khulnasoft" title="KhulnaSoft on Twitter"><img src="https://img.shields.io/twitter/follow/khulnasoft.svg?style=social"></a>                                   |
+| ❓&nbsp; **Other Requests**    | <a href="mailto:team@khulnasoft.com" title="Email KhulnaSoft Team"><img src="https://img.shields.io/badge/email-KhulnaSoft-green?logo=mail.ru&logoColor=white"></a>                                                                                                                                                                             |
 
 ---
 
@@ -122,7 +122,7 @@ This project is maintained by [Benjamin Räthlein](https://twitter.com/raethlein
   <a href="#build-script-cli">Build Script CLI</a> •
   <a href="#default-flags">Default Flags</a> •
   <a href="#api-reference">API Reference</a> •
-  <a href="#update-universal-build">Update Universal Build</a>
+  <a href="#update-ml-buildkit">Update Ml Build</a>
 </p>
 
 ### Build Script CLI
@@ -150,10 +150,10 @@ python build.py [OPTIONS]
 
 ### Default Flags
 
-At its core, universal-build will parse all arguments provided to the build script via `build_utils.parse_arguments()` and returns a sanitized and augmented list of arguments. Those arguments are the building blocks for your build script. You can utilize those arguments in whatever way you like. Here is an example on how to use those arguments in a `build.py` script:
+At its core, ml-buildkit will parse all arguments provided to the build script via `build_utils.parse_arguments()` and returns a sanitized and augmented list of arguments. Those arguments are the building blocks for your build script. You can utilize those arguments in whatever way you like. Here is an example on how to use those arguments in a `build.py` script:
 
 ```python
-from universal_build import build_utils
+from ml_buildkit import build_utils
 
 args = build_utils.parse_arguments()
 
@@ -169,7 +169,7 @@ if args.get(build_utils.FLAG_TEST):
     # Run additional slow tests.
 ```
 
-The following list contains all of the default flags currently supported by universal-build:
+The following list contains all of the default flags currently supported by ml-buildkit:
 
 | Flag               | Type        | Description                                                                                                              |
 | ------------------ | ----------- | ------------------------------------------------------------------------------------------------------------------------ |
@@ -184,23 +184,23 @@ The following list contains all of the default flags currently supported by univ
 
 ### API Reference
 
-In addition to argument parsing capabilities, universal-build also contains a variety of utility functions to make building complex projects with different technologies easy. You can find all utilities in the Python API documentation [here](https://github.com/ml-tooling/universal-build/tree/main/docs).
+In addition to argument parsing capabilities, ml-buildkit also contains a variety of utility functions to make building complex projects with different technologies easy. You can find all utilities in the Python API documentation [here](https://github.com/khulnasoft/ml-buildkit/tree/main/docs).
 
-### Update Universal Build
+### Update Ml Build
 
-To update the universal-build version of your project, simply look up the most recent version of build-environment on [DockerHub](https://hub.docker.com/repository/docker/mltooling/build-environment) and set this version in the `.github/actions/build-environment/Dockerfile` file of your repository:
+To update the ml-buildkit version of your project, simply look up the most recent version of build-environment on [DockerHub](https://hub.docker.com/repository/docker/khulnasoft/build-environment) and set this version in the `.github/actions/build-environment/Dockerfile` file of your repository:
 
 ```Dockerfile
-FROM mltooling/build-environment:<UPDATED_VERSION>
+FROM khulnasoft/build-environment:<UPDATED_VERSION>
 ```
 
-In case you also run your build outside of the build-environment (locally), make sure to also upgrade universal-build on your local machine from [PyPi](https://pypi.org/project/universal-build/):
+In case you also run your build outside of the build-environment (locally), make sure to also upgrade ml-buildkit on your local machine from [PyPi](https://pypi.org/project/ml-buildkit/):
 
 ```bash
-pip install --upgrade universal-build
+pip install --upgrade ml-buildkit
 ```
 
-Furthermore, you can also check if the [build-](https://github.com/ml-tooling/universal-build/blob/main/workflows/build-pipeline.yml) and [release-pipeline](https://github.com/ml-tooling/universal-build/blob/main/workflows/release-pipeline.yml) workflows have changed. In case of changes, update the workflows in your `.github/workflows` folder of your repository as well.
+Furthermore, you can also check if the [build-](https://github.com/khulnasoft/ml-buildkit/blob/main/workflows/build-pipeline.yml) and [release-pipeline](https://github.com/khulnasoft/ml-buildkit/blob/main/workflows/release-pipeline.yml) workflows have changed. In case of changes, update the workflows in your `.github/workflows` folder of your repository as well.
 
 ---
 
@@ -222,11 +222,11 @@ Furthermore, you can also check if the [build-](https://github.com/ml-tooling/un
 
 ### Automated Build Pipeline (CI)
 
-Universal-build enables you to run your build pipeline on your local machine, in a containerized environment via [Act](https://github.com/nektos/act), or automated via [Github Actions](https://github.com/features/actions) (= Continuous Integration).
+ML-buildkit enables you to run your build pipeline on your local machine, in a containerized environment via [Act](https://github.com/nektos/act), or automated via [Github Actions](https://github.com/features/actions) (= Continuous Integration).
 
 #### Local machine via build script (not recommended):
 
-> _Requirements: [universal-build](#installation) and all the build requirements that your build script is using (e.g. yarn, pipenv, maven, ...) need to be installed on your machine._
+> _Requirements: [ml-buildkit](#installation) and all the build requirements that your build script is using (e.g. yarn, pipenv, maven, ...) need to be installed on your machine._
 
 Execute the following command in the root folder of any component with a valid `build.py` script:
 
@@ -260,7 +260,7 @@ To release a new version and publish all relevant artifacts to the respective re
 
 #### Local machine via build script (not recommended):
 
-> _Requirements: [universal-build](#installation) and all the build requirements that your build script is using (e.g. yarn, pipenv, maven, ...) need to be installed on your machine._
+> _Requirements: [ml-buildkit](#installation) and all the build requirements that your build script is using (e.g. yarn, pipenv, maven, ...) need to be installed on your machine._
 
 Execute the following command in the root folder of any component with a valid `build.py` script:
 
@@ -300,9 +300,9 @@ In case the release pipeline fails at any step, we suggest to fix the problem ba
 
 ### Support for Nested Components
 
-> _You can find the implementation of this multi-nested example in the [examples](https://github.com/ml-tooling/universal-build/tree/main/examples) folder._
+> _You can find the implementation of this multi-nested example in the [examples](https://github.com/khulnasoft/ml-buildkit/tree/main/examples) folder._
 
-Universal-build has excellent support for repositories that contain multiple nested components (aka Monorepo). The following [`examples`](https://github.com/ml-tooling/universal-build/tree/main/examples) repository has four components: `docs`, `react-webapp`, `docker`, and `python-lib`:
+ML-buildkit has excellent support for repositories that contain multiple nested components (aka Monorepo). The following [`examples`](https://github.com/khulnasoft/ml-buildkit/tree/main/examples) repository has four components: `docs`, `react-webapp`, `docker`, and `python-lib`:
 
 ```plain
 examples:
@@ -317,12 +317,12 @@ examples:
     - build.py
 ```
 
-Every component needs its own `build.py` script in the component root folder that implements all the logic to build, check, test, and release the given component. The `build.py` script in the repo root folder contains the build logic that orchestrates all component builds. Universal-build provides the [`build_utils.build()`](https://github.com/ml-tooling/universal-build/blob/main/docs/universal_build.build_utils.md#function-build) function that allows to call the build script of a sub-component with the parsed arguments (find more info on `build` function in the [API documentation](https://github.com/ml-tooling/universal-build/blob/main/docs/universal_build.build_utils.md#function-build)).
+Every component needs its own `build.py` script in the component root folder that implements all the logic to build, check, test, and release the given component. The `build.py` script in the repo root folder contains the build logic that orchestrates all component builds. ML-buildkit provides the [`build_utils.build()`](https://github.com/khulnasoft/ml-buildkit/blob/main/docs/ml_buildkit.build_utils.md#function-build) function that allows to call the build script of a sub-component with the parsed arguments (find more info on `build` function in the [API documentation](https://github.com/khulnasoft/ml-buildkit/blob/main/docs/ml_buildkit.build_utils.md#function-build)).
 
 In between the build steps, you can execute any required operations, for example, duplicating build artifacts from one component to another. The following example, shows the `build.py` script that would support the `examples` repository structure:
 
 ```python
-from universal_build import build_utils
+from ml_buildkit import build_utils
 
 args = build_utils.parse_arguments()
 
@@ -353,15 +353,15 @@ Or directly from the Github UI: `Actions` -> `build-pipeline` -> `Run workflow`.
 
 > Only [semantic versioning](https://semver.org/) is supported at the moment.
 
-If you do not provide an explicit version via the build arguments (`--version`), universal-build will automatically detect the latest version via Git tags and pass a dev version to your build scripts. The dev version will have the following format: `<MAJOR>.<MINOR>.<PATCH>-dev.<BRANCH>`. This should be sufficient for the majority of development builds. However, the release step still requires to have a valid semantic version provided via the arguments.
+If you do not provide an explicit version via the build arguments (`--version`), ml-buildkit will automatically detect the latest version via Git tags and pass a dev version to your build scripts. The dev version will have the following format: `<MAJOR>.<MINOR>.<PATCH>-dev.<BRANCH>`. This should be sufficient for the majority of development builds. However, the release step still requires to have a valid semantic version provided via the arguments.
 
 ### Python Utilities
 
-The [`build_python`](https://github.com/ml-tooling/universal-build/blob/main/docs/universal_build.helpers.build_python.md) module of universal-build provides a collection of utilities to simplify the process of building and releasing Python packages. Refer to the [API documentation](https://github.com/ml-tooling/universal-build/blob/main/docs/universal_build.helpers.build_python.md) for full documentation on all python utilities. An example for a build script for a Python package is shown below:
+The [`build_python`](https://github.com/khulnasoft/ml-buildkit/blob/main/docs/ml_buildkit.helpers.build_python.md) module of ml-buildkit provides a collection of utilities to simplify the process of building and releasing Python packages. Refer to the [API documentation](https://github.com/khulnasoft/ml-buildkit/blob/main/docs/ml_buildkit.helpers.build_python.md) for full documentation on all python utilities. An example for a build script for a Python package is shown below:
 
 ```python
-from universal_build import build_utils
-from universal_build.helpers import build_python
+from ml_buildkit import build_utils
+from ml_buildkit.helpers import build_python
 
 # Project specific configuration
 MAIN_PACKAGE = "template_package"
@@ -393,7 +393,7 @@ if args.get(build_utils.FLAG_RELEASE):
   build_python.publish_pypi_distribution(pypi_token=args.get(build_python.FLAG_PYPI_TOKEN),pypi_repository=args.get(build_python.FLAG_PYPI_REPOSITORY))
 ```
 
-The [`build_python.parse_arguments()`](https://github.com/ml-tooling/universal-build/blob/main/docs/universal_build.helpers.build_python.md#function-parse_arguments) argument parser has the following additional flags:
+The [`build_python.parse_arguments()`](https://github.com/khulnasoft/ml-buildkit/blob/main/docs/ml_buildkit.helpers.build_python.md#function-parse_arguments) argument parser has the following additional flags:
 
 | Flag                   | Type  | Description                               |
 | ---------------------- | ----- | ----------------------------------------- |
@@ -407,14 +407,14 @@ And the following additional CLI options:
 
 ### Docker Utilities
 
-The [`build_docker`](https://github.com/ml-tooling/universal-build/blob/main/docs/universal_build.helpers.build_docker.md) module of universal-build provides a collection of utilities to simplify the process of building and releasing Docker images. Refer to the [API documentation](https://github.com/ml-tooling/universal-build/blob/main/docs/universal_build.helpers.build_docker.md) for full documentation on all docker utilities. An example for a build script for a Docker image is shown below:
+The [`build_docker`](https://github.com/khulnasoft/ml-buildkit/blob/main/docs/ml_buildkit.helpers.build_docker.md) module of ml-buildkit provides a collection of utilities to simplify the process of building and releasing Docker images. Refer to the [API documentation](https://github.com/khulnasoft/ml-buildkit/blob/main/docs/ml_buildkit.helpers.build_docker.md) for full documentation on all docker utilities. An example for a build script for a Docker image is shown below:
 
 ```python
-from universal_build import build_utils
-from universal_build.helpers import build_docker
+from ml_buildkit import build_utils
+from ml_buildkit.helpers import build_docker
 
 IMAGE_NAME = "build-environment"
-DOCKER_IMAGE_PREFIX = "mltooling"
+DOCKER_IMAGE_PREFIX = "khulnasoft"
 
 args = build_docker.parse_arguments()
 
@@ -430,7 +430,7 @@ if args.get(build_utils.FLAG_RELEASE):
   build_docker.release_docker_image(IMAGE_NAME, version, DOCKER_IMAGE_PREFIX)
 ```
 
-The [`build_docker.parse_arguments()`](https://github.com/ml-tooling/universal-build/blob/main/docs/universal_build.helpers.build_docker.md#function-parse_arguments) argument parser has the following additional flags:
+The [`build_docker.parse_arguments()`](https://github.com/khulnasoft/ml-buildkit/blob/main/docs/ml_buildkit.helpers.build_docker.md#function-parse_arguments) argument parser has the following additional flags:
 
 | Flag                       | Type  | Description                                                                                                    |
 | -------------------------- | ----- | -------------------------------------------------------------------------------------------------------------- |
@@ -442,11 +442,11 @@ And the following additional CLI options:
 
 ### MkDocs Utilities
 
-The [`build_mkdocs`](https://github.com/ml-tooling/universal-build/blob/main/docs/universal_build.helpers.build_mkdocs.md) module of universal-build provides a collection of utilities to simplify the process of building and releasing MkDocs documentation. Refer to the [API documentation](https://github.com/ml-tooling/universal-build/blob/main/docs/universal_build.helpers.build_mkdocs.md) for full documentation on all MkDocs utilities. An example for a build script for MkDocs documentation is shown below:
+The [`build_mkdocs`](https://github.com/khulnasoft/ml-buildkit/blob/main/docs/ml_buildkit.helpers.build_mkdocs.md) module of ml-buildkit provides a collection of utilities to simplify the process of building and releasing MkDocs documentation. Refer to the [API documentation](https://github.com/khulnasoft/ml-buildkit/blob/main/docs/ml_buildkit.helpers.build_mkdocs.md) for full documentation on all MkDocs utilities. An example for a build script for MkDocs documentation is shown below:
 
 ```python
-from universal_build import build_utils
-from universal_build.helpers import build_mkdocs
+from ml_buildkit import build_utils
+from ml_buildkit.helpers import build_mkdocs
 
 args = build_utils.parse_arguments()
 
@@ -471,7 +471,7 @@ if args.get(build_utils.FLAG_RELEASE):
 Install the tools in the Dockerfile in your `.github/actions/build-environment/Dockerfile` as demonstrated in this example:
 
 ```Dockerfile
-FROM mltooling/build-environment:0.6.18
+FROM khulnasoft/build-environment:0.6.18
 
 # Install Go Runtime
 RUN apt-get update \
@@ -483,7 +483,7 @@ RUN apt-get update \
 You can extend or overwrite the default entrypoint with your custom entrypoint script (e.g. `extended-entrypoint.sh`) as shown below:
 
 ```Dockerfile
-FROM mltooling/build-environment:0.6.18
+FROM khulnasoft/build-environment:0.6.18
 
 COPY extended-entrypoint.sh /extended-entrypoint.sh
 
@@ -526,7 +526,7 @@ The following example demonstrates how you can support custom build arguments (C
 ```python
 import argparse
 
-from universal_build import build_utils
+from ml_buildkit import build_utils
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--deployment-token", help="Token to deploy component.", default="")
@@ -580,7 +580,7 @@ To use the build-environment for containerized development, just define a `.devc
 }
 ```
 
-You can find a full example [here](https://github.com/ml-tooling/universal-build/blob/main/.devcontainer/devcontainer.json).
+You can find a full example [here](https://github.com/khulnasoft/ml-buildkit/blob/main/.devcontainer/devcontainer.json).
 
 ---
 
@@ -662,9 +662,9 @@ os.environ["CONTAINER_HOST_PORT"] = container_host_port
 
 ## Contribution
 
-- Pull requests are encouraged and always welcome. Read our [contribution guidelines](https://github.com/ml-tooling/universal-build/tree/main/CONTRIBUTING.md) and check out [help-wanted](https://github.com/ml-tooling/universal-build/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+label%3A"help+wanted"+sort%3Areactions-%2B1-desc+) issues.
-- Submit Github issues for any [feature request and enhancement](https://github.com/ml-tooling/universal-build/issues/new?assignees=&labels=feature&template=02_feature-request.md&title=), [bugs](https://github.com/ml-tooling/universal-build/issues/new?assignees=&labels=bug&template=01_bug-report.md&title=), or [documentation](https://github.com/ml-tooling/universal-build/issues/new?assignees=&labels=documentation&template=03_documentation.md&title=) problems.
-- By participating in this project, you agree to abide by its [Code of Conduct](https://github.com/ml-tooling/universal-build/blob/main/.github/CODE_OF_CONDUCT.md).
+- Pull requests are encouraged and always welcome. Read our [contribution guidelines](https://github.com/khulnasoft/ml-buildkit/tree/main/CONTRIBUTING.md) and check out [help-wanted](https://github.com/khulnasoft/ml-buildkit/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+label%3A"help+wanted"+sort%3Areactions-%2B1-desc+) issues.
+- Submit Github issues for any [feature request and enhancement](https://github.com/khulnasoft/ml-buildkit/issues/new?assignees=&labels=feature&template=02_feature-request.md&title=), [bugs](https://github.com/khulnasoft/ml-buildkit/issues/new?assignees=&labels=bug&template=01_bug-report.md&title=), or [documentation](https://github.com/khulnasoft/ml-buildkit/issues/new?assignees=&labels=documentation&template=03_documentation.md&title=) problems.
+- By participating in this project, you agree to abide by its [Code of Conduct](https://github.com/khulnasoft/ml-buildkit/blob/main/.github/CODE_OF_CONDUCT.md).
 - The [development section](#development) below contains information on how to build and test the project after you have implemented some changes.
 
 ## Development
@@ -677,7 +677,7 @@ To simplify the process of building this project from scratch, we provide build-
 act -b -j build
 ```
 
-Refer to our [contribution guides](https://github.com/ml-tooling/universal-build/blob/main/CONTRIBUTING.md#development-instructions) for more detailed information on our build scripts and development process.
+Refer to our [contribution guides](https://github.com/khulnasoft/ml-buildkit/blob/main/CONTRIBUTING.md#development-instructions) for more detailed information on our build scripts and development process.
 
 ---
 

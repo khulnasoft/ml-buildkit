@@ -1,8 +1,8 @@
 <!-- markdownlint-disable -->
 
-<a href="https://github.com/ml-tooling/universal-build/blob/main/src/universal_build/helpers/build_python.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khulnasoft/ml-buildkit/blob/main/src/ml_buildkit/helpers/build_python.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
-# <kbd>module</kbd> `universal_build.helpers.build_python`
+# <kbd>module</kbd> `ml_buildkit.helpers.build_python`
 Utilities to help building Python libraries. 
 
 **Global Variables**
@@ -12,7 +12,7 @@ Utilities to help building Python libraries.
 
 ---
 
-<a href="https://github.com/ml-tooling/universal-build/blob/main/src/universal_build/helpers/build_python.py#L16"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khulnasoft/ml-buildkit/blob/main/src/ml_buildkit/helpers/build_python.py#L16"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `parse_arguments`
 
@@ -43,7 +43,7 @@ Sanitized means that, for example, the version is already checked and set depend
 
 ---
 
-<a href="https://github.com/ml-tooling/universal-build/blob/main/src/universal_build/helpers/build_python.py#L52"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khulnasoft/ml-buildkit/blob/main/src/ml_buildkit/helpers/build_python.py#L52"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `is_pipenv_environment`
 
@@ -56,7 +56,7 @@ Check if current working directory is a valid pipenv environment.
 
 ---
 
-<a href="https://github.com/ml-tooling/universal-build/blob/main/src/universal_build/helpers/build_python.py#L72"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khulnasoft/ml-buildkit/blob/main/src/ml_buildkit/helpers/build_python.py#L72"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `test_with_py_version`
 
@@ -76,7 +76,7 @@ Run pytest in a environment wiht the specified python version.
 
 ---
 
-<a href="https://github.com/ml-tooling/universal-build/blob/main/src/universal_build/helpers/build_python.py#L112"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khulnasoft/ml-buildkit/blob/main/src/ml_buildkit/helpers/build_python.py#L112"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `install_build_env`
 
@@ -95,7 +95,7 @@ Installs a new virtual environment via pipenv.
 
 ---
 
-<a href="https://github.com/ml-tooling/universal-build/blob/main/src/universal_build/helpers/build_python.py#L137"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khulnasoft/ml-buildkit/blob/main/src/ml_buildkit/helpers/build_python.py#L137"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `generate_api_docs`
 
@@ -120,7 +120,7 @@ Generates API documentation via lazydocs.
 
 ---
 
-<a href="https://github.com/ml-tooling/universal-build/blob/main/src/universal_build/helpers/build_python.py#L164"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khulnasoft/ml-buildkit/blob/main/src/ml_buildkit/helpers/build_python.py#L164"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `publish_pypi_distribution`
 
@@ -147,7 +147,7 @@ Publish distribution to pypi.
 
 ---
 
-<a href="https://github.com/ml-tooling/universal-build/blob/main/src/universal_build/helpers/build_python.py#L198"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khulnasoft/ml-buildkit/blob/main/src/ml_buildkit/helpers/build_python.py#L198"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `code_checks`
 
@@ -180,7 +180,7 @@ Run linting and style checks.
 
 ---
 
-<a href="https://github.com/ml-tooling/universal-build/blob/main/src/universal_build/helpers/build_python.py#L334"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khulnasoft/ml-buildkit/blob/main/src/ml_buildkit/helpers/build_python.py#L334"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `update_version`
 
@@ -205,7 +205,7 @@ Update version in specified module.
 
 ---
 
-<a href="https://github.com/ml-tooling/universal-build/blob/main/src/universal_build/helpers/build_python.py#L361"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khulnasoft/ml-buildkit/blob/main/src/ml_buildkit/helpers/build_python.py#L361"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `build_distribution`
 
@@ -226,4 +226,4 @@ Build python package distribution.
 
 ---
 
-_This file was automatically generated via [lazydocs](https://github.com/ml-tooling/lazydocs)._
+_This file was automatically generated via [lazydocs](https://github.com/khulnasoft/lazydocs)._

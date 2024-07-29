@@ -6,7 +6,7 @@ from typing import Union
 
 import urllib3
 
-from universal_build import build_utils
+from ml_buildkit import build_utils
 
 DEFAULT_TEMP_DIR = "./temp"
 

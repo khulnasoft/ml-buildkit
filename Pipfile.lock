@@ -88,7 +88,7 @@
             "editable": true,
             "path": "."
         },
-        "universal-build": {
+        "ml-buildkit": {
             "editable": true,
             "path": "."
         },
@@ -739,7 +739,7 @@
             "markers": "python_version >= '3.6'",
             "version": "==4.0.0"
         },
-        "universal-build": {
+        "ml-buildkit": {
             "editable": true,
             "path": "."
         },

@@ -1,14 +1,14 @@
 <!-- markdownlint-disable -->
 
-<a href="https://github.com/ml-tooling/universal-build/blob/main/src/universal_build/helpers/build_mkdocs.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khulnasoft/ml-buildkit/blob/main/src/ml_buildkit/helpers/build_mkdocs.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
-# <kbd>module</kbd> `universal_build.helpers.build_mkdocs`
+# <kbd>module</kbd> `ml_buildkit.helpers.build_mkdocs`
 Utilities to help building MkDocs documentations. 
 
 
 ---
 
-<a href="https://github.com/ml-tooling/universal-build/blob/main/src/universal_build/helpers/build_mkdocs.py#L12"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khulnasoft/ml-buildkit/blob/main/src/ml_buildkit/helpers/build_mkdocs.py#L12"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `install_build_env`
 
@@ -27,7 +27,7 @@ Installs a new virtual environment via pipenv.
 
 ---
 
-<a href="https://github.com/ml-tooling/universal-build/blob/main/src/universal_build/helpers/build_mkdocs.py#L34"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khulnasoft/ml-buildkit/blob/main/src/ml_buildkit/helpers/build_mkdocs.py#L34"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `lint_markdown`
 
@@ -47,7 +47,7 @@ Run markdownlint on markdown documentation.
 
 ---
 
-<a href="https://github.com/ml-tooling/universal-build/blob/main/src/universal_build/helpers/build_mkdocs.py#L55"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khulnasoft/ml-buildkit/blob/main/src/ml_buildkit/helpers/build_mkdocs.py#L55"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `build_mkdocs`
 
@@ -66,7 +66,7 @@ Build mkdocs markdown documentation.
 
 ---
 
-<a href="https://github.com/ml-tooling/universal-build/blob/main/src/universal_build/helpers/build_mkdocs.py#L72"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khulnasoft/ml-buildkit/blob/main/src/ml_buildkit/helpers/build_mkdocs.py#L72"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `deploy_gh_pages`
 
@@ -85,7 +85,7 @@ Deploy mkdocs documentation to Github pages.
 
 ---
 
-<a href="https://github.com/ml-tooling/universal-build/blob/main/src/universal_build/helpers/build_mkdocs.py#L94"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khulnasoft/ml-buildkit/blob/main/src/ml_buildkit/helpers/build_mkdocs.py#L94"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `run_dev_mode`
 
@@ -107,4 +107,4 @@ Run mkdocs development server.
 
 ---
 
-_This file was automatically generated via [lazydocs](https://github.com/ml-tooling/lazydocs)._
+_This file was automatically generated via [lazydocs](https://github.com/khulnasoft/lazydocs)._

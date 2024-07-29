@@ -8,12 +8,12 @@ from os.path import basename, splitext
 from setuptools import find_packages, setup  # type: ignore
 
 # Package meta-data.
-NAME = "universal-build"
-MAIN_PACKAGE = "universal_build"  # Change if main package != NAME
-DESCRIPTION = "Universal build utilities for containerized build pipelines."
-URL = "https://github.com/ml-tooling/universal-build"
-EMAIL = "team@mltooling.org"
-AUTHOR = "ML Tooling Team"
+NAME = "ml-buildkit"
+MAIN_PACKAGE = "ml_buildkit"  # Change if main package != NAME
+DESCRIPTION = "Ml build utilities for containerized build pipelines."
+URL = "https://github.com/khulnasoft/ml-buildkit"
+EMAIL = "team@khulnasoft.com"
+AUTHOR = "KhulnaSoft Team"
 LICENSE = "MIT"
 REQUIRES_PYTHON = ">=3.6"
 VERSION = None  # Only set version if you like to overwrite the version in _about.py

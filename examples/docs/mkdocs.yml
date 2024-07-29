@@ -1,12 +1,12 @@
 # Project information
 site_name: Project Template
 site_description: Documentation for the Project Template
-site_author: ML Tooling Team
-site_url: https://mltooling.github.io/project-template/
+site_author: KhulnaSoft Team
+site_url: https://khulnasoft.github.io/project-template/
 
 # Repository
-repo_name: mltooling/project-template
-repo_url: https://github.com/mltooling/project-template
+repo_name: khulnasoft/project-template
+repo_url: https://github.com/khulnasoft/project-template
 
 # Theme
 theme:
@@ -76,6 +76,6 @@ extra:
     code: "Roboto Mono"
   social:
     - icon: fontawesome/brands/github-alt
-      link: https://github.com/mltooling/project-template
+      link: https://github.com/khulnasoft/project-template
 #extra_css: [css/custom.css]
 #extra_javascript:

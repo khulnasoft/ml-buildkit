@@ -3,8 +3,8 @@
 import os
 import sys
 
-from universal_build import build_utils
-from universal_build.helpers.build_python import is_pipenv_environment
+from ml_buildkit import build_utils
+from ml_buildkit.helpers.build_python import is_pipenv_environment
 
 _PIPENV_RUN = "pipenv run"
 

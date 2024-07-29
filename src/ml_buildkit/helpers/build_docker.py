@@ -5,7 +5,7 @@ import os
 import subprocess
 from typing import List, Optional
 
-from universal_build import build_utils
+from ml_buildkit import build_utils
 
 FLAG_DOCKER_IMAGE_PREFIX = "docker_image_prefix"
 
@@ -30,7 +30,7 @@ def parse_arguments(
 
     argument_parser.add_argument(
         "--" + FLAG_DOCKER_IMAGE_PREFIX.replace("_", "-"),
-        help="Provide a prefix for a Docker image, e.g. 'mltooling/' or even a repository path. When leaving blank, the default Dockerhub Repository is used.",
+        help="Provide a prefix for a Docker image, e.g. 'khulnasoft/' or even a repository path. When leaving blank, the default Dockerhub Repository is used.",
         required=False,
         default="",
     )

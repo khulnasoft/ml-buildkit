@@ -7,7 +7,7 @@ import sys
 from shutil import rmtree
 from typing import List, Optional
 
-from universal_build import build_utils
+from ml_buildkit import build_utils
 
 FLAG_PYPI_TOKEN = "pypi_token"
 FLAG_PYPI_REPOSITORY = "pypi_repository"

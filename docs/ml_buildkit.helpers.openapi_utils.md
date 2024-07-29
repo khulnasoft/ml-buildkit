@@ -1,8 +1,8 @@
 <!-- markdownlint-disable -->
 
-<a href="https://github.com/ml-tooling/universal-build/blob/main/src/universal_build/helpers/openapi_utils.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khulnasoft/ml-buildkit/blob/main/src/ml_buildkit/helpers/openapi_utils.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
-# <kbd>module</kbd> `universal_build.helpers.openapi_utils`
+# <kbd>module</kbd> `ml_buildkit.helpers.openapi_utils`
 OpenAPI utilities. 
 
 **Global Variables**
@@ -11,7 +11,7 @@ OpenAPI utilities.
 
 ---
 
-<a href="https://github.com/ml-tooling/universal-build/blob/main/src/universal_build/helpers/openapi_utils.py#L94"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khulnasoft/ml-buildkit/blob/main/src/ml_buildkit/helpers/openapi_utils.py#L94"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `generate_openapi_client`
 
@@ -49,7 +49,7 @@ The passed OpenAPI specification file will be taken to generate a client using t
 
 ---
 
-<a href="https://github.com/ml-tooling/universal-build/blob/main/src/universal_build/helpers/openapi_utils.py#L142"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khulnasoft/ml-buildkit/blob/main/src/ml_buildkit/helpers/openapi_utils.py#L142"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `generate_openapi_js_client`
 
@@ -69,12 +69,12 @@ For more information, see `generate_openapi_client`.
 
 ---
 
-<a href="https://github.com/ml-tooling/universal-build/blob/main/src/universal_build/helpers/openapi_utils.py#L14"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khulnasoft/ml-buildkit/blob/main/src/ml_buildkit/helpers/openapi_utils.py#L14"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>class</kbd> `OpenApiGenerator`
 Enum of generators that can generate clients based on OpenAPI specifications. 
 
-<a href="https://github.com/ml-tooling/universal-build/blob/main/src/universal_build/helpers/openapi_utils.py#L30"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khulnasoft/ml-buildkit/blob/main/src/ml_buildkit/helpers/openapi_utils.py#L30"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `__init__`
 
@@ -99,4 +99,4 @@ __init__(
 
 ---
 
-_This file was automatically generated via [lazydocs](https://github.com/ml-tooling/lazydocs)._
+_This file was automatically generated via [lazydocs](https://github.com/khulnasoft/lazydocs)._

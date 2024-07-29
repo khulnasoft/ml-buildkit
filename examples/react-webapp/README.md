@@ -129,12 +129,12 @@ To run the tests, execute `yarn test`. To see test coverage, execute `yarn test 
 
 ### Installed Packages
 
-Please have a look at the [package.json](https://github.com/mltooling/project-template/blob/react-webapp/react-webapp/package.json) and check whether the dependencies for react, react-scripts etc. should be updated. Also, check whether package updates influence some configuration files such as the configuration of [.storybook](./.storybook).
+Please have a look at the [package.json](https://github.com/khulnasoft/project-template/blob/react-webapp/react-webapp/package.json) and check whether the dependencies for react, react-scripts etc. should be updated. Also, check whether package updates influence some configuration files such as the configuration of [.storybook](./.storybook).
 
 ### VS Code
 
-- For the settings, have a look at the _Web Development_ Section of our [Recommended Settings](https://github.com/mltooling/project-template/blob/main/.vscode/recommended-settings.json).
-- For recommended extensions, have a look at the _General Development_ and _Web Development_ Sections of our [Extensions list](https://github.com/mltooling/project-template/blob/main/.vscode/extensions.json).
+- For the settings, have a look at the _Web Development_ Section of our [Recommended Settings](https://github.com/khulnasoft/project-template/blob/main/.vscode/recommended-settings.json).
+- For recommended extensions, have a look at the _General Development_ and _Web Development_ Sections of our [Extensions list](https://github.com/khulnasoft/project-template/blob/main/.vscode/extensions.json).
 - For JSDoc, no extension is needed as it is [built in VS Code](https://code.visualstudio.com/docs/languages/javascript#_jsdoc-support). Just type `\**` and autocomplete. When using types in the comment, VS Code even considers the typing.
 - Sometimes, linting errors don't disappear even though you seem to have fixed them. Close the file and re-open it to see whether the error persists.
 

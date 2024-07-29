@@ -1,6 +1,6 @@
 import argparse
 
-from universal_build import build_utils
+from ml_buildkit import build_utils
 
 if __name__ == "__main__":
 

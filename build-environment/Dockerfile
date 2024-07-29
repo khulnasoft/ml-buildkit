@@ -137,9 +137,9 @@ ENV \
 
 # Install universal build from distribution
 # hadolint ignore=DL3010
-COPY ./resources/universal-build.tar.gz $RESOURCES_PATH/universal-build.tar.gz
+COPY ./resources/ml-buildkit.tar.gz $RESOURCES_PATH/ml-buildkit.tar.gz
 # hadolint ignore=DL3013
-RUN pip install $RESOURCES_PATH/universal-build.tar.gz
+RUN pip install $RESOURCES_PATH/ml-buildkit.tar.gz
 
 # Install hadolint - Dockerfile linter
 RUN curl -fsSL https://github.com/hadolint/hadolint/releases/download/v2.8.0/hadolint-Linux-x86_64 -o /bin/hadolint \

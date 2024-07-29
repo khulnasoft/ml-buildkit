@@ -1,8 +1,8 @@
 <!-- markdownlint-disable -->
 
-<a href="https://github.com/ml-tooling/universal-build/blob/main/src/universal_build/helpers/build_docker.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khulnasoft/ml-buildkit/blob/main/src/ml_buildkit/helpers/build_docker.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
-# <kbd>module</kbd> `universal_build.helpers.build_docker`
+# <kbd>module</kbd> `ml_buildkit.helpers.build_docker`
 Utilities to help building Docker images. 
 
 **Global Variables**
@@ -11,7 +11,7 @@ Utilities to help building Docker images.
 
 ---
 
-<a href="https://github.com/ml-tooling/universal-build/blob/main/src/universal_build/helpers/build_docker.py#L13"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khulnasoft/ml-buildkit/blob/main/src/ml_buildkit/helpers/build_docker.py#L13"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `parse_arguments`
 
@@ -42,7 +42,7 @@ Sanitized means that, for example, the version is already checked and set depend
 
 ---
 
-<a href="https://github.com/ml-tooling/universal-build/blob/main/src/universal_build/helpers/build_docker.py#L43"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khulnasoft/ml-buildkit/blob/main/src/ml_buildkit/helpers/build_docker.py#L43"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `check_image`
 
@@ -67,7 +67,7 @@ Run vulnerability checks on Dockerimage.
 
 ---
 
-<a href="https://github.com/ml-tooling/universal-build/blob/main/src/universal_build/helpers/build_docker.py#L65"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khulnasoft/ml-buildkit/blob/main/src/ml_buildkit/helpers/build_docker.py#L65"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `lint_dockerfile`
 
@@ -92,7 +92,7 @@ Run hadolint on the Dockerfile.
 
 ---
 
-<a href="https://github.com/ml-tooling/universal-build/blob/main/src/universal_build/helpers/build_docker.py#L87"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khulnasoft/ml-buildkit/blob/main/src/ml_buildkit/helpers/build_docker.py#L87"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `get_image_name`
 
@@ -119,7 +119,7 @@ Get a valid versioned image name.
 
 ---
 
-<a href="https://github.com/ml-tooling/universal-build/blob/main/src/universal_build/helpers/build_docker.py#L104"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khulnasoft/ml-buildkit/blob/main/src/ml_buildkit/helpers/build_docker.py#L104"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `build_docker_image`
 
@@ -157,7 +157,7 @@ Build a docker image from a Dockerfile in the working directory.
 
 ---
 
-<a href="https://github.com/ml-tooling/universal-build/blob/main/src/universal_build/helpers/build_docker.py#L165"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khulnasoft/ml-buildkit/blob/main/src/ml_buildkit/helpers/build_docker.py#L165"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `release_docker_image`
 
@@ -192,4 +192,4 @@ Push a Docker image to a repository.
 
 ---
 
-_This file was automatically generated via [lazydocs](https://github.com/ml-tooling/lazydocs)._
+_This file was automatically generated via [lazydocs](https://github.com/khulnasoft/lazydocs)._

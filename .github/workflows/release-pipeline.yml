@@ -1,4 +1,4 @@
-# Based on https://github.com/ml-tooling/universal-build/blob/v0.6.11/workflows/build-pipeline.yml
+# Based on https://github.com/khulnasoft/ml-buildkit/blob/v0.6.11/workflows/build-pipeline.yml
 name: release-pipeline
 
 on:
@@ -119,7 +119,7 @@ jobs:
         name: checkout-fixed-release-drafter
         uses: actions/checkout@v2
         with:
-          repository: ml-tooling/release-drafter
+          repository: khulnasoft/release-drafter
           path: ./.git/cloned-actions/release-drafter
       - if: ${{ env.GITHUB_ACTOR != 'nektos/act' && env.GITHUB_TOKEN != null && env.GITHUB_TOKEN != '' }}
         name: create-release-draft
