@@ -15,7 +15,7 @@ URL = "https://github.com/khulnasoft/ml-buildkit"
 EMAIL = "team@khulnasoft.com"
 AUTHOR = "KhulnaSoft Team"
 LICENSE = "MIT"
-REQUIRES_PYTHON = ">=3.6"
+REQUIRES_PYTHON = ">=3.8"
 VERSION = None  # Only set version if you like to overwrite the version in _about.py
 
 PWD = os.path.abspath(os.path.dirname(__file__))

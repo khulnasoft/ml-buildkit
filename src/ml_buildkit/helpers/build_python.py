@@ -14,7 +14,7 @@ FLAG_PYPI_REPOSITORY = "pypi_repository"
 
 
 def parse_arguments(
-    input_args: List[str] = None, argument_parser: argparse.ArgumentParser = None
+    input_args: Optional[List[str]] = None, argument_parser: Optional[argparse.ArgumentParser] = None
 ) -> dict:
     """Parses all arguments and returns a sanitized & augmented list of arguments.
 
@@ -22,11 +22,11 @@ def parse_arguments(
     If arguments are not valid, exit the script run.
 
     Args:
-        input_args (List[str], optional): List of arguments that are used instead of the arguments passed to the process. Defaults to `None`.
-        argument_parser (arparse.ArgumentParser, optional): An argument parser which is passed as a parents parser to the default ArgumentParser to be able to use additional flags besides the default ones.
+        input_args (Optional[List[str]], optional): List of arguments that are used instead of the arguments passed to the process. Defaults to `None`.
+        argument_parser (Optional[argparse.ArgumentParser], optional): An argument parser which is passed as a parents parser to the default ArgumentParser to be able to use additional flags besides the default ones.
 
     Returns:
-        dict: The parsed default arguments thar are already checked for validity.
+        dict: The parsed default arguments that are already checked for validity.
     """
     if argument_parser is None:
         argument_parser = argparse.ArgumentParser()
@@ -47,7 +47,6 @@ def parse_arguments(
     return build_utils.parse_arguments(
         input_args=input_args, argument_parser=argument_parser
     )
-
 
 def is_pipenv_environment() -> bool:
     """Check if current working directory is a valid pipenv environment."""

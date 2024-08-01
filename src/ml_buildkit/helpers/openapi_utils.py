@@ -1,15 +1,10 @@
-"""OpenAPI utilities."""
-
+from typing import Optional, Union
 import pathlib
-from enum import Enum
-from typing import Union
-
 import urllib3
-
+from enum import Enum
 from ml_buildkit import build_utils
 
 DEFAULT_TEMP_DIR = "./temp"
-
 
 class OpenApiGenerator(Enum):
     """Enum of generators that can generate clients based on OpenAPI specifications."""
@@ -50,10 +45,9 @@ class OpenApiGenerator(Enum):
         openapi_spec_file: str,
         target_language: str,
         work_dir: str,
-        additional_properties: str = None,
+        additional_properties: Optional[str] = None,
         additional_flags: str = "",
     ) -> str:
-
         if additional_properties:
             additional_properties = f"--additional-properties {additional_properties}"
         else:
@@ -67,7 +61,6 @@ class OpenApiGenerator(Enum):
             additional_properties=additional_properties,
             additional_flags=additional_flags,
         )
-
 
 def _check_and_download_generator_cli(
     codegen_cli_path: str,
@@ -89,7 +82,6 @@ def _check_and_download_generator_cli(
         else:
             return False
     return True
-
 
 def generate_openapi_client(
     openapi_spec_file: str,
@@ -114,7 +106,6 @@ def generate_openapi_client(
     Returns:
         Union[str, None]: Returns the output path if the client generation was successful and None otherwise.
     """
-
     pathlib.Path(work_dir).mkdir(exist_ok=True)
     codegen_cli_path = f"{work_dir}/{client_generator.cli_name}"
     is_successful = _check_and_download_generator_cli(
@@ -137,7 +128,6 @@ def generate_openapi_client(
     )
 
     return client_generator.get_output_path(work_dir=work_dir)
-
 
 def generate_openapi_js_client(
     openapi_spec_file: str,
