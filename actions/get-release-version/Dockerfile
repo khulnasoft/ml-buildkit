@@ -18,7 +18,7 @@ RUN apt-get update \
 ENV LC_ALL="en_US.UTF-8" \
     LANG="en_US.UTF-8" \
     LANGUAGE="en_US:en" \
-    TZ="Europe/Berlin" \
+    TZ="Asia/Dhaka" \
     DEBIAN_FRONTEND="noninteractive"
 
 RUN apt-get update \
