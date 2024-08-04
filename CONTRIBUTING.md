@@ -7,16 +7,30 @@ Everyone is welcome to contribute, and we value everybody's contribution. Code i
 
 ## Table of contents
 
-1. [Issues and bug reports](#issues-and-bug-reports)
-2. [Contributing to the code base](#contributing-to-the-code-base)
-    - [Development instructions](#development-instructions)
+- [Contribute to Ml Build](#contribute-to-ml-build)
+  - [Table of contents](#table-of-contents)
+  - [Issues and bug reports](#issues-and-bug-reports)
+  - [Contributing to the code base](#contributing-to-the-code-base)
+    - [Development Instructions](#development-instructions)
+      - [Requirements](#requirements)
+      - [Build components](#build-components)
+      - [Run linting \& style checks](#run-linting--style-checks)
+      - [Run integration \& unit tests](#run-integration--unit-tests)
+      - [Release a new version](#release-a-new-version)
+        - [Via Act (locally)](#via-act-locally)
+        - [Via Github Actions](#via-github-actions)
+        - [Resolve an unsuccessful release](#resolve-an-unsuccessful-release)
     - [Commit messages guidelines](#commit-messages-guidelines)
     - [Opening a pull request](#opening-a-pull-request)
-    - [Review & merging of a pull request](#review--merging-of-a-pull-request)
-    - [Git workflow & versioning](#git-workflow--versioning)
-3. [Code conventions](#code-conventions)
+    - [Review \& merging of a pull request](#review--merging-of-a-pull-request)
+    - [Git workflow \& versioning](#git-workflow--versioning)
+  - [Code conventions](#code-conventions)
     - [Python conventions](#python-conventions)
-4. [Code of conduct](#code-of-conduct)
+      - [Code style \& naming](#code-style--naming)
+      - [Code formatting](#code-formatting)
+      - [Code linting](#code-linting)
+      - [Adding \& running tests](#adding--running-tests)
+  - [Code of Conduct](#code-of-conduct)
 
 ## Issues and bug reports
 
