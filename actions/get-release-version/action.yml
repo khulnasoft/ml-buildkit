@@ -1,6 +1,6 @@
 name: "get-release-version"
 description: "Extract the the release version from the current branch."
-author: "KhulnaSoft <team@khulnasoft.com>"
+author: "KhulnaSoft <support@khulnasoft.com>"
 
 inputs:
   branch_prefix:

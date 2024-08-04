@@ -1,10 +1,9 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: ml-buildkit
-Upstream-Contact: Lukas Masuch <lukas.masuch@gmail.com>
-                  Benjamin Raethlein <benjamin.raethlein@gmail.com>
-                  Jan Kalkan <kalkan.jan@gmail.com>
+Upstream-Contact: KhulnaSoft Lab <info@khulnasoft.com>
+                  Md Mamun <iconmamundentist@gmail.com>
 Source: https://github.com/khulnasoft/ml-buildkit
 
 Files: **
-Copyright: Lukas Masuch, Benjamin Raehtlein, and Jan Kalkan
+Copyright: KhulnaSoft Lab, Benjamin Raehtlein, and Jan Kalkan
 License: MIT

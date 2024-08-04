@@ -27,7 +27,7 @@ def main(args: dict) -> None:
     if args.get(build_utils.FLAG_MAKE):
         # Install pipenv dev requirements
         build_python.install_build_env(exit_on_error=True)
-        # Create API documentation via lazydocs
+        # Create API documentation via docsai
         build_python.generate_api_docs(
             github_url=GITHUB_URL, main_package=MAIN_PACKAGE, exit_on_error=True
         )

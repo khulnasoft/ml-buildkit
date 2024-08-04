@@ -107,7 +107,7 @@ generate_api_docs(
 ) → None
 ```
 
-Generates API documentation via lazydocs. 
+Generates API documentation via docsai. 
 
 
 
@@ -226,4 +226,4 @@ Build python package distribution.
 
 ---
 
-_This file was automatically generated via [lazydocs](https://github.com/khulnasoft/lazydocs)._
+_This file was automatically generated via [docsai](https://github.com/khulnasoft/docsai)._

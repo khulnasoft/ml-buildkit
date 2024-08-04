@@ -12,8 +12,8 @@ NAME = "ml-buildkit"
 MAIN_PACKAGE = "ml_buildkit"  # Change if main package != NAME
 DESCRIPTION = "Ml build utilities for containerized build pipelines."
 URL = "https://github.com/khulnasoft/ml-buildkit"
-EMAIL = "team@khulnasoft.com"
-AUTHOR = "KhulnaSoft Team"
+EMAIL = "support@khulnasoft.com"
+AUTHOR = "KhulnaSoft DevOps"
 LICENSE = "MIT"
 REQUIRES_PYTHON = ">=3.8"
 VERSION = None  # Only set version if you like to overwrite the version in _about.py
@@ -63,7 +63,7 @@ setup(
             "black",
             "pydocstyle",
             "isort",
-            "lazydocs",
+            "docsai",
         ],
     },
     include_package_data=True,

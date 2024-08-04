@@ -138,7 +138,7 @@ def generate_api_docs(
     main_package: str,
     exit_on_error: bool = True,
 ) -> None:
-    """Generates API documentation via lazydocs.
+    """Generates API documentation via docsai.
 
     Args:
         github_url (str): Github URL
@@ -150,11 +150,11 @@ def generate_api_docs(
     if is_pipenv_environment():
         command_prefix = "pipenv run"
     else:
-        # Check lazydocs command
-        build_utils.command_exists("lazydocs", exit_on_error=exit_on_error)
+        # Check docsai command
+        build_utils.command_exists("docsai", exit_on_error=exit_on_error)
 
     build_utils.run(
-        f"{command_prefix} lazydocs --overview-file=README.md"
+        f"{command_prefix} docsai --overview-file=README.md"
         f" --src-base-url={github_url}/blob/main {main_package}",
         exit_on_error=exit_on_error,
     )

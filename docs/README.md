@@ -17,4 +17,4 @@
 
 ---
 
-_This file was automatically generated via [lazydocs](https://github.com/ml-tooling/lazydocs)._
+_This file was automatically generated via [docsai](https://github.com/ml-tooling/docsai)._
