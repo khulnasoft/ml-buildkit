@@ -149,8 +149,7 @@ RUN curl -fsSL https://github.com/hadolint/hadolint/releases/download/v2.8.0/had
 # https://github.com/aquasecurity/trivy
 RUN curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/master/contrib/install.sh | sh -s -- -b /usr/local/bin
 
-COPY ./resources/entrypoint.sh /entrypoint.sh
-
-RUN chmod +x /entrypoint.sh
+COPY ./resources/entrypoint.sh $RESOURCES_PATH/entrypoint.sh \
+    && chmod +x $RESOURCES_PATH/entrypoint.sh
 
 ENTRYPOINT ["/tini", "-g", "--", "/entrypoint.sh"]
