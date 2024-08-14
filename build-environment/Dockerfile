@@ -135,9 +135,12 @@ ENV \
     # Activate better exceptions (for python)
     BETTER_EXCEPTIONS=1
 
-# Install universal build from distribution
+# Install buildkit build from distribution
 # hadolint ignore=DL3010
-COPY ./resources/ml-buildkit.tar.gz $RESOURCES_PATH/ml-buildkit.tar.gz
+
+RUN curl -fsSL https://github.com/khulnasoft/ml-buildkit/archive/refs/heads/main.zip -o ./resources/ml-buildkit.tar.gz \
+    && chmod +x $RESOURCES_PATH/ml-buildkit.tar.gz \
+    && cp ./resources/ml-buildkit.tar.gz $RESOURCES_PATH/ml-buildkit.tar.gz
 # hadolint ignore=DL3013
 RUN pip install $RESOURCES_PATH/ml-buildkit.tar.gz
 
