@@ -61,7 +61,7 @@ def main(args: dict) -> None:
         if args.get(FLAG_CHECK):
             build_python.code_checks(exit_on_error=True, safety=False)
 
-    if args.get(FLAG_TEST):
+        if args.get(FLAG_TEST):
             # Remove coverage files
             build_utils.run("pipenv run coverage erase", exit_on_error=False)
 
