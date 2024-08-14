@@ -35,8 +35,8 @@ jobs:
         uses: docker/build-push-action@v6.7.0
         with:
           context: .
-          file: ./Dockerfile
+          file: ./build-environment/Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/ml-buildkit:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/build-environment:latest
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache
