@@ -135,7 +135,7 @@ ENV \
     # Activate better exceptions (for python)
     BETTER_EXCEPTIONS=1
 
-# Install universal build from distribution
+# Install ml buildkit from distribution
 # hadolint ignore=DL3010
 COPY ./resources/ml-buildkit.tar.gz $RESOURCES_PATH/ml-buildkit.tar.gz
 # hadolint ignore=DL3013
@@ -149,7 +149,8 @@ RUN curl -fsSL https://github.com/hadolint/hadolint/releases/download/v2.8.0/had
 # https://github.com/aquasecurity/trivy
 RUN curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/master/contrib/install.sh | sh -s -- -b /usr/local/bin
 
-COPY ./resources/entrypoint.sh $RESOURCES_PATH/entrypoint.sh \
-    && chmod +x $RESOURCES_PATH/entrypoint.sh
+COPY ./resources/entrypoint.sh /entrypoint.sh
+
+RUN chmod +x /entrypoint.sh
 
 ENTRYPOINT ["/tini", "-g", "--", "/entrypoint.sh"]
