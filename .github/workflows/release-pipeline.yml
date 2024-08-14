@@ -85,9 +85,9 @@ jobs:
           PYPI_REPOSITORY: ${{ secrets.PYPI_REPOSITORY }}
         with:
           build_args: --release --force --version=${{ env.VERSION }}
-          container_registry_url: ${{ secrets.CONTAINER_REGISTRY_URL }}
-          container_registry_username: ${{ secrets.CONTAINER_REGISTRY_USERNAME }}
-          container_registry_password: ${{ secrets.CONTAINER_REGISTRY_PASSWORD }}
+          container_registry_url: "docker.io"
+          container_registry_username: ${{ secrets.DOCKER_USERNAME }}
+          container_registry_password: ${{ secrets.DOCKER_TOKEN }}
       - if: ${{ env.GITHUB_TOKEN != null && env.GITHUB_TOKEN != '' }}
         name: push-changes
         uses: stefanzweifel/git-auto-commit-action@v4
