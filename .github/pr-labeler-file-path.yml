@@ -6,6 +6,7 @@ documentation:
   - "**/README.md"
   - "CONTRIBUTING.md"
 
+# Add maintenance label to any changes in maintenance-related files
 maintenance:
   - ".vscode/*"
   - ".vscode/**/*"
