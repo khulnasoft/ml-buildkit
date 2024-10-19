@@ -1,4 +1,3 @@
-# Based on https://github.com/khulnasoft/ml-buildkit/blob/v0.6.14/workflows/build-pipeline.yml
 name: build-pipeline
 
 on:
