@@ -77,7 +77,6 @@ RUN apt-get update \
         gcc \
         python3-dev \
     && ln -s /usr/bin/python3 /usr/bin/python \
-    # && ln -s /usr/bin/pip3 /usr/bin/pip \
     && pip install --no-cache-dir \
         setuptools==58.* \
         wheel==0.* \
@@ -153,7 +152,5 @@ RUN curl -fsSL https://github.com/hadolint/hadolint/releases/download/v2.8.0/had
 RUN curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/master/contrib/install.sh | sh -s -- -b /usr/local/bin
 
 COPY ./resources/entrypoint.sh /entrypoint.sh
-
-RUN chmod +x /entrypoint.sh
 
 ENTRYPOINT ["/tini", "-g", "--", "/entrypoint.sh"]
