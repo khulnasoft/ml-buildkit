@@ -19,7 +19,7 @@ if [ -n "$GITHUB_TOKEN" ]; then
     BUILD_ARGS="$BUILD_ARGS --github-token=$GITHUB_TOKEN"
 fi
 
-if [ -z "$GITHUB_TOKEN" ] && [ -n "$INPUT_CONTAINER_REGISTRY_USERNAME" ] && [ -n "$INPUT_CONTAINER_REGISTRY_PASSWORD" ]; then
+if [ -n "$INPUT_CONTAINER_REGISTRY_USERNAME" ] && [ -n "$INPUT_CONTAINER_REGISTRY_PASSWORD" ]; then
     echo "Container registry credentials provided. Logging in to registry..."
     docker login $INPUT_CONTAINER_REGISTRY_URL -u "$INPUT_CONTAINER_REGISTRY_USERNAME" -p "$INPUT_CONTAINER_REGISTRY_PASSWORD"
 
@@ -47,6 +47,14 @@ export INPUT_CONTAINER_MOUNT
 
 if [ -n "$INPUT_CONTAINER_MOUNT" ]; then
     BUILD_ARGS="$BUILD_ARGS --container-mount=\"$INPUT_CONTAINER_MOUNT\""
+fi
+
+# Set Python version if provided
+if [ -n "$INPUT_PYTHON_VERSION" ]; then
+    export PYTHON_VERSION="$INPUT_PYTHON_VERSION"
+    echo "Python version specified: $PYTHON_VERSION"
+    pyenv install -s $PYTHON_VERSION
+    pyenv global $PYTHON_VERSION
 fi
 
 # Print command
