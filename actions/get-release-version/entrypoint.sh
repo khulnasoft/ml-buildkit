@@ -22,5 +22,5 @@ if [[ ! "$RELEASE_VERSION" =~ ^([0-9]+\.[0-9]+\.[0-9]+.*)$ ]]; then
     exit 1
 fi
 
-# Set version as outpu
+# Set version as output
 echo "::set-output name=release_version::$RELEASE_VERSION"
