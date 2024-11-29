@@ -6,6 +6,9 @@ on:
       version:
         description: "Version of this release"
         required: true
+      python_version:
+        description: "Python version to use"
+        required: false
   milestone:
     types: [closed]
 
@@ -63,18 +66,21 @@ jobs:
         uses: ./.github/actions/build-environment
         with:
           build_args: --make --force --version=${{ env.VERSION  }}
+          python_version: ${{ env.PYTHON_VERSION }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: run-linting-and-style-checks
         uses: ./.github/actions/build-environment
         with:
           build_args: --check --force --version=${{ env.VERSION  }}
+          python_version: ${{ env.PYTHON_VERSION }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: run-component-tests
         uses: ./.github/actions/build-environment
         with:
           build_args: --test --force --test-marker=slow --version=${{ env.VERSION  }}
+          python_version: ${{ env.PYTHON_VERSION }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: release-components
@@ -88,6 +94,7 @@ jobs:
           container_registry_url: "docker.io"
           container_registry_username: ${{ secrets.DOCKER_USERNAME }}
           container_registry_password: ${{ secrets.DOCKER_TOKEN }}
+          python_version: ${{ env.PYTHON_VERSION }}
       - if: ${{ env.GITHUB_TOKEN != null && env.GITHUB_TOKEN != '' }}
         name: push-changes
         uses: stefanzweifel/git-auto-commit-action@v5
