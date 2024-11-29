@@ -10,12 +10,16 @@ on:
       working_directory:
         description: "Working directory from where the build command is run"
         required: false
+      python_version:
+        description: "Python version to use"
+        required: false
   push:
   pull_request:
 
 env:
   BUILD_ARGS: ${{ secrets.BUILD_ARGS }}
   WORKING_DIRECTORY: ${{ secrets.WORKING_DIRECTORY }}
+  PYTHON_VERSION: ${{ secrets.PYTHON_VERSION }}
 
 jobs:
   build:
@@ -29,6 +33,10 @@ jobs:
         if: ${{ github.event.inputs != null  &&  github.event.inputs.working_directory != null}}
         run: echo "WORKING_DIRECTORY=${{ github.event.inputs.working_directory }}" >> $GITHUB_ENV
         # new syntax: run: echo "WORKING_DIRECTORY=${{ github.event.inputs.working_directory }}" >> "$GITHUB_ENV"
+      - name: set-input-python-version
+        if: ${{ github.event.inputs != null  &&  github.event.inputs.python_version != null}}
+        run: echo "PYTHON_VERSION=${{ github.event.inputs.python_version }}" >> $GITHUB_ENV
+        # new syntax: run: echo "PYTHON_VERSION=${{ github.event.inputs.python_version }}" >> "$GITHUB_ENV"
       # Set host ip to env variable to be uside within container actions
       - name: set-host-ip
         run: echo "_HOST_IP=$(hostname -I | cut -d ' ' -f 1)" >> $GITHUB_ENV
@@ -38,5 +46,6 @@ jobs:
         with:
           build_args: ${{ env.BUILD_ARGS }}
           working_directory: ${{ env.WORKING_DIRECTORY }}
+          python_version: ${{ env.PYTHON_VERSION }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
