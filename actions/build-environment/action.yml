@@ -17,7 +17,12 @@ inputs:
   container_registry_password:
     description: "Password used for container registry login"
     required: false
+  python_version:
+    description: "Python version to use"
+    required: false
 
 runs:
   using: "docker"
   image: "Dockerfile"
+  args:
+    - ${{ inputs.python_version }}
