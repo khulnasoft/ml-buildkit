@@ -13,7 +13,7 @@ jobs:
           configuration-path: .github/pr-labeler-file-path.yml
           # workaround for problem: https://github.com/wesnoth/wesnoth/commit/958c82d0867568057caaf58356502ec8c87d8366
           sync-labels: ""
-      - uses: TimonVS/pr-labeler-action@v3
+      - uses: TimonVS/pr-labeler-action@v5
         with:
           configuration-path: .github/pr-labeler-branch-name.yml
         env:
