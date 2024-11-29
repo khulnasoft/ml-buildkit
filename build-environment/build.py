@@ -41,6 +41,9 @@ def main(args: dict) -> None:
             COMPONENT_NAME, version, docker_image_prefix, exit_on_error=True
         )
 
+    if args.get(build_utils.FLAG_RUN):
+        build_docker.run_docker_container(COMPONENT_NAME, version, exit_on_error=True)
+
 
 if __name__ == "__main__":
     main(build_docker.parse_arguments())
