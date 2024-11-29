@@ -520,6 +520,37 @@ def copy(
     return True
 
 
+def lint_dockerfile(dockerfile_path: str) -> None:
+    """Run linting checks on the Dockerfile.
+
+    Args:
+        dockerfile_path (str): Path to the Dockerfile.
+    """
+    command = f"docker run --rm -i hadolint/hadolint < {dockerfile_path}"
+    run(command, exit_on_error=True)
+
+
+def check_image(image_name: str) -> None:
+    """Run vulnerability checks on the Docker image.
+
+    Args:
+        image_name (str): Name of the Docker image.
+    """
+    command = f"docker scan {image_name}"
+    run(command, exit_on_error=True)
+
+
+def release_docker_image(image_name: str, tag: str) -> None:
+    """Release the Docker image.
+
+    Args:
+        image_name (str): Name of the Docker image.
+        tag (str): Tag for the Docker image.
+    """
+    command = f"docker push {image_name}:{tag}"
+    run(command, exit_on_error=True)
+
+
 # Private functions
 
 
