@@ -19,7 +19,7 @@ if [ -n "$GITHUB_TOKEN" ]; then
     BUILD_ARGS="$BUILD_ARGS --github-token=$GITHUB_TOKEN"
 fi
 
-if [ -n "$INPUT_CONTAINER_REGISTRY_USERNAME" ] && [ -n "$INPUT_CONTAINER_REGISTRY_PASSWORD" ]; then
+if [ -z "$GITHUB_TOKEN" ] && [ -n "$INPUT_CONTAINER_REGISTRY_USERNAME" ] && [ -n "$INPUT_CONTAINER_REGISTRY_PASSWORD" ]; then
     echo "Container registry credentials provided. Logging in to registry..."
     docker login $INPUT_CONTAINER_REGISTRY_URL -u "$INPUT_CONTAINER_REGISTRY_USERNAME" -p "$INPUT_CONTAINER_REGISTRY_PASSWORD"
 
