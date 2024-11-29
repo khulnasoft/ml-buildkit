@@ -18,6 +18,7 @@ FLAG_MAKE = "--make"
 FLAG_CHECK = "--check"
 FLAG_TEST = "--test"
 FLAG_RELEASE = "--release"
+FLAG_RUN = "--run"
 
 # Define a logger
 logger = logging.getLogger(__name__)
@@ -112,6 +113,10 @@ def main(args: dict) -> None:
             # TODO: Publish coverage report: if private repo set CODECOV_TOKEN="token" or use -t
             # build_utils.run("curl -s https://codecov.io/bash | bash -s", exit_on_error=False)
 
+        if args.get(FLAG_RUN):
+            # Run the component in development mode
+            build_utils.run("pipenv run python -m src.ml_buildkit", exit_on_error=True)
+
         # Build the build-environment component
         build_utils.build("build-environment", args)
         # Build all examples components
@@ -131,6 +136,7 @@ if __name__ == "__main__":
     parser.add_argument(FLAG_CHECK, action="store_true", help="Check the project")
     parser.add_argument(FLAG_TEST, action="store_true", help="Test the project")
     parser.add_argument(FLAG_RELEASE, action="store_true", help="Release the project")
+    parser.add_argument(FLAG_RUN, action="store_true", help="Run the project")
 
     args = vars(parser.parse_args())
 
